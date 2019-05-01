@@ -4,7 +4,7 @@ import dagger.Component;
 import us.bojie.dagger2example.MainActivity;
 import us.bojie.dagger2example.car.Car;
 
-@Component(modules = {WheelsModule.class, DiesalEngineModule.class})
+@Component(modules = {WheelsModule.class, DieselEngineModule.class})
 public interface CarComponent {
     Car getCar();
 

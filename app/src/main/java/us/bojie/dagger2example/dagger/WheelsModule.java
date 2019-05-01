@@ -7,7 +7,7 @@ import us.bojie.dagger2example.car.Tires;
 import us.bojie.dagger2example.car.Wheels;
 
 @Module
-public class WheelsModule {
+public abstract class WheelsModule {
 
     @Provides
     static Rims provideRims() {
