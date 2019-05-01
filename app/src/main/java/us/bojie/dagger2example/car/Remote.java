@@ -1,4 +1,4 @@
-package us.bojie.dagger2example;
+package us.bojie.dagger2example.car;
 
 import android.util.Log;
 

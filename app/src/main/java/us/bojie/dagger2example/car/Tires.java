@@ -1,8 +1,8 @@
-package us.bojie.dagger2example;
+package us.bojie.dagger2example.car;
 
 import android.util.Log;
 
-class Tires {
+public class Tires {
     // we don't own this class so we can't annotate it with @Inject
 
     private static final String TAG = "Tires";

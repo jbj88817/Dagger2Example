@@ -1,7 +1,10 @@
-package us.bojie.dagger2example;
+package us.bojie.dagger2example.dagger;
 
 import dagger.Module;
 import dagger.Provides;
+import us.bojie.dagger2example.car.Rims;
+import us.bojie.dagger2example.car.Tires;
+import us.bojie.dagger2example.car.Wheels;
 
 @Module
 public class WheelsModule {

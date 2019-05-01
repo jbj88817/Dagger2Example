@@ -1,4 +1,4 @@
-package us.bojie.dagger2example;
+package us.bojie.dagger2example.car;
 
 public class Wheels {
 
