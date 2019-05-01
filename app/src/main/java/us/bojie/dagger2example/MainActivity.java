@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import us.bojie.dagger2example.car.Car;
 import us.bojie.dagger2example.dagger.CarComponent;
 import us.bojie.dagger2example.dagger.DaggerCarComponent;
-import us.bojie.dagger2example.dagger.DieselEngineModule;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         CarComponent carComponent = DaggerCarComponent.builder()
-                .dieselEngineModule(new DieselEngineModule(100))
+                .horsePower(150)
+                .engineCapacity(1400)
                 .build();
         carComponent.inject(this);
         car.drive();
