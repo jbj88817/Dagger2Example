@@ -12,7 +12,8 @@ import us.bojie.dagger2example.dagger.DaggerCarComponent;
 public class MainActivity extends AppCompatActivity {
 
     @Inject
-    Car car;
+    Car car1, car2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 .engineCapacity(1400)
                 .build();
         carComponent.inject(this);
-        car.drive();
+        car1.drive();
+        car2.drive();
     }
 }

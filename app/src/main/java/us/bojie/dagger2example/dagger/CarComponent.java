@@ -1,12 +1,14 @@
 package us.bojie.dagger2example.dagger;
 
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
 import us.bojie.dagger2example.MainActivity;
 import us.bojie.dagger2example.car.Car;
 
+@Singleton
 @Component(modules = {WheelsModule.class, PetrolEngineModule.class})
 public interface CarComponent {
     Car getCar();
