@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import androidx.appcompat.app.AppCompatActivity;
 import us.bojie.dagger2example.car.Car;
 import us.bojie.dagger2example.dagger.ActivityComponent;
-import us.bojie.dagger2example.dagger.DaggerActivityComponent;
+import us.bojie.dagger2example.dagger.DieselEngineModule;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,11 +18,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ActivityComponent activityComponent = DaggerActivityComponent.builder()
-                .horsePower(120)
-                .engineCapacity(1400)
-                .appComponent(((ExampleApp) getApplication()).getAppComponent())
-                .build();
+        ActivityComponent activityComponent = ((ExampleApp) getApplication()).getAppComponent()
+                .getActivityComponent(new DieselEngineModule(120));
         activityComponent.inject(this);
         car1.drive();
         car2.drive();
