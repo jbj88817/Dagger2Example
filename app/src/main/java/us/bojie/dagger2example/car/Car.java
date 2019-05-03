@@ -4,6 +4,9 @@ import android.util.Log;
 
 import javax.inject.Inject;
 
+import us.bojie.dagger2example.dagger.PerActivity;
+
+@PerActivity
 public class Car {
     private static final String TAG = "Car";
 

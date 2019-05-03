@@ -1,16 +1,15 @@
 package us.bojie.dagger2example.dagger;
 
 import javax.inject.Named;
-import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
 import us.bojie.dagger2example.MainActivity;
 import us.bojie.dagger2example.car.Car;
 
-@Singleton
-@Component(modules = {WheelsModule.class, PetrolEngineModule.class})
-public interface CarComponent {
+@PerActivity
+@Component(dependencies = AppComponent.class, modules = {WheelsModule.class, PetrolEngineModule.class})
+public interface ActivityComponent {
     Car getCar();
 
     void inject(MainActivity mainActivity);
@@ -23,6 +22,8 @@ public interface CarComponent {
         @BindsInstance
         Builder engineCapacity(@Named("engine capacity") int engineCapacity);
 
-        CarComponent build();
+        Builder appComponent(AppComponent appComponent);
+
+        ActivityComponent build();
     }
 }
